@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 app.use(express.static('public'))
 
 app.get('/', (req, res, next) => {
-  knex('planosearch')
+  knex('listings')
   .then((rows) => {
     res.send(rows)
   })
