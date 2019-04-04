@@ -10,6 +10,7 @@ exports.up = function(knex, Promise) {
     table.string('sqft')
     table.string('price')
     table.string('iframe')
+    table.string('thumbnail')
   })
 }
 
