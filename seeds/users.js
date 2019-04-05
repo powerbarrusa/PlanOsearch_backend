@@ -9,4 +9,4 @@ exports.seed = function(knex, Promise) {
         {id: 2, username: 'barr@planomatic.com', password: 'planomatic'}
       ])
     })
-}
+  }

@@ -25,6 +25,18 @@ app.get('/', (req, res, next) => {
   })
 })
 
+app.get('/favorites', (req, res, next) => {
+  return knex("listings")
+  .join("favorites", {"favorites.listings_id": "listings.id"})
+  .join("users", {"favorites.users_id":"users.id"})
+  .then((Faves) => {
+    res.send(Faves)
+  })
+  .catch((err) => {
+    next(err)
+  })
+})
+
 app.delete('/:id', (req, res, next) => {
   knex('planosearch').where('id', req.params.id).del().returning('*')
   .then((rows) => {

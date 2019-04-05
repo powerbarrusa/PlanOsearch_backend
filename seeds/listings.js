@@ -11,4 +11,4 @@ exports.seed = function(knex, Promise) {
         {id: 4, street: '277 N. Broadway, Unit 201', city: 'Denver', state: 'Colorado', zip: 80203, beds_baths: '1/1', sqft: '890', price: '$250,000', iframe: 'https://planotours.planomatic.com/tour/178885/tourmini', thumbnail: 'https://photoplan-cache.cdn.planomatic.com/tourFiles/178885/photocache/5423490-300wh.jpg'}
       ])
     })
-}
+  }
