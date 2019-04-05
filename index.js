@@ -37,6 +37,16 @@ app.get('/favorites', (req, res, next) => {
   })
 })
 
+app.post('/addFave', (req, res, next) => {
+  knex('planosearch').insert(req.body)
+  .then((rows) => {
+    res.send(rows)
+  })
+  .catch((err) =>{
+    next(err);
+  })
+})
+
 app.delete('/:id', (req, res, next) => {
   knex('planosearch').where('id', req.params.id).del().returning('*')
   .then((rows) => {
